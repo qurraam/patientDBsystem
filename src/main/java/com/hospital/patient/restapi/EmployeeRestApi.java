@@ -43,6 +43,10 @@ public class EmployeeRestApi {
     public List<Employee> getEmployeesByHospital(@PathVariable("id") Long hospitalId) {
         return employeeService.getEmployeesByHospital(hospitalId);
     }
+	@GetMapping("/employee/name/{name}")
+	public List<Employee> getEmployeesByName(@PathVariable("name") String name) {
+	    return this.employeeService.getEmployeesByName(name);
+	}
 	@DeleteMapping("/employee/{id}")
 	public Boolean deleteEmployee(@PathVariable("id") long id) {
 		//employeeRepository.deleteById(id);

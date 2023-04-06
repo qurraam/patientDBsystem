@@ -42,6 +42,9 @@ public class EmployeeService {
 		
 		return employeeRepository.findById(id);
 	}
+	public List<Employee> getEmployeesByName(String name) {
+        return employeeRepository.findByNameContaining(name);
+}
 	public Boolean deleteEmployee(long id) {
 		employeeRepository.deleteById(id);
 		return true;

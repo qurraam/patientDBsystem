@@ -38,6 +38,12 @@ public class PatientService {
 		
 		return patientRepository.findById(id);
 	}
+
+
+     public List<Patient> getPatientsByName(String name) {
+        return patientRepository.findByNameContaining(name);
+}
+
 	public Boolean deletePatient(long id) {
 		patientRepository.deleteById(id);
 		return true;

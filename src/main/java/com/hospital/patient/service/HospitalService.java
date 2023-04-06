@@ -40,6 +40,10 @@ public class HospitalService {
 		
 		return hospitalRepository.findById(id);
 	}
+	public List<Hospital> getHospitalsByName(String name) {
+        return hospitalRepository.findByNameContaining(name);
+}
+
 	public Boolean deleteHospital(long id) {
 		hospitalRepository.deleteById(id);
 		return true;
