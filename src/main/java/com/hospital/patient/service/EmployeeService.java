@@ -34,6 +34,9 @@ public class EmployeeService {
 	public List<Employee> getList() {
 		return employeeRepository.findAll();
 	}
+	public List<Employee> getEmployeesByHospital(Long hospitalId) {
+        return employeeRepository.findByHospitalId(hospitalId);
+    }
 	public Optional<Employee> getEmployeeById(long id) {
 		Employee employee = employeeRepository.findOneById(id);
 		
