@@ -38,6 +38,10 @@ public class PatientRestApi {
 	public Optional<Patient> getPatientById(@PathVariable("id") long id) {
 		return this.patientService.getPatientById(id);
 	}
+	@GetMapping("/patient/name/{name}")
+	public List<Patient> getPatientsByName(@PathVariable("name") String name) {
+	    return this.patientService.getPatientsByName(name);
+	}
 	@DeleteMapping("/patient/{id}")
 	public Boolean deletePatient(@PathVariable("id") long id) {
 		//patientRepository.deleteById(id);

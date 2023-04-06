@@ -41,6 +41,10 @@ public class HospitalRestApi {
 	public Optional<Hospital> getHospitalById(@PathVariable("id") long id) {
 		return this.hospitalService.getHospitalById(id);
 	}
+	@GetMapping("/hospital/name/{name}")
+	public List<Hospital> getHospitalsByName(@PathVariable("name") String name) {
+	    return this.hospitalService.getHospitalsByName(name);
+	}
 	@DeleteMapping("{id}")
 	public Boolean deleteHospital(@PathVariable("id") long id) {
 		//hospitalRepository.deleteById(id);

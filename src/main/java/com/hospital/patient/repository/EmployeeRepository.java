@@ -13,4 +13,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
 	Employee findOneById(long id);
 
+	List<Employee> findByNameContaining(String name);
+
 }
