@@ -57,7 +57,7 @@ public class EventService {
         
         eventRepository.save(p);
 	}
-	 public List<Event> getAllEvents() {
+	    public List<Event> getAllEvents() {
 	        return eventRepository.findAll();
 	    }
 
